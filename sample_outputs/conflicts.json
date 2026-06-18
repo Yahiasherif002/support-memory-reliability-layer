@@ -1,0 +1,113 @@
+[
+  {
+    "id": "con_8a72de967fb9d0def85172e96afce20f",
+    "type": "contradiction",
+    "kind": "belief_value_conflict",
+    "status": "open",
+    "entity_id": "acct_helios_945",
+    "attribute": "plan_tier",
+    "detected_at": "2026-06-18T00:00:00Z",
+    "detail": {
+      "winner_value": "Enterprise Support",
+      "other_value": "Starter",
+      "winner_reliability": "high",
+      "other_reliability": "medium",
+      "winner_source": "contract",
+      "other_source": "crm"
+    },
+    "refs": {
+      "fact_id_a": "fact_3526b9a6c23a691901478cc69b92973c",
+      "fact_id_b": "fact_a5f3e3b31809d912e911e98d4ee30c31",
+      "event_id_a": null,
+      "event_id_b": null,
+      "resolution_note": null
+    }
+  },
+  {
+    "id": "con_9f5c12cd616f31116a2a65ee4b86e98e",
+    "type": "contradiction",
+    "kind": "belief_value_conflict",
+    "status": "open",
+    "entity_id": "ticket_h_945_p1",
+    "attribute": "seats",
+    "detected_at": "2026-06-18T00:00:00Z",
+    "detail": {
+      "winner_value": 48,
+      "other_value": 42,
+      "winner_reliability": "medium",
+      "other_reliability": "medium",
+      "winner_source": "email",
+      "other_source": "agent_note"
+    },
+    "refs": {
+      "fact_id_a": "fact_84b0ccd7079e8745f37a89eafc0da965",
+      "fact_id_b": "fact_68e5333309362270015020e951117047",
+      "event_id_a": null,
+      "event_id_b": null,
+      "resolution_note": null
+    }
+  },
+  {
+    "id": "con_1b849f6492a99afce479daefe25fc8c6",
+    "type": "contradiction",
+    "kind": "idempotency_conflict",
+    "status": "open",
+    "entity_id": null,
+    "attribute": null,
+    "detected_at": "2026-06-18T00:00:00Z",
+    "detail": {
+      "idempotency_key": "idem-1008",
+      "first_fingerprint": "f1c380036352735d4a057fdbdaaba73cc82830a0eb5b897be71b1d86e7525af0",
+      "conflicting_fingerprint": "237dc85913215e9a8b8b8a310935c2989ef5bfa7edc2e229b5ee0970d7b5f7b5"
+    },
+    "refs": {
+      "fact_id_a": null,
+      "fact_id_b": null,
+      "event_id_a": "evt-1008",
+      "event_id_b": "evt-1009",
+      "resolution_note": null
+    }
+  },
+  {
+    "id": "con_6778c5671ae9afc21b35b13781ef312c",
+    "type": "contradiction",
+    "kind": "belief_value_conflict",
+    "status": "open",
+    "entity_id": "contact_mona_945",
+    "attribute": "contact_preference",
+    "detected_at": "2026-06-18T00:00:00Z",
+    "detail": {
+      "winner_value": "email_only_except_p1",
+      "other_value": "whatsapp",
+      "winner_reliability": "medium",
+      "other_reliability": "medium",
+      "winner_source": "email",
+      "other_source": "agent_note"
+    },
+    "refs": {
+      "fact_id_a": "fact_b90359912faa9593c21bff0b6771231a",
+      "fact_id_b": "fact_c7f202e7db6e6cee358661ab34ae7664",
+      "event_id_a": null,
+      "event_id_b": null,
+      "resolution_note": null
+    }
+  },
+  {
+    "id": "idc_88d2de29b9c271ca11898e479fb70c1c",
+    "type": "identity_candidate",
+    "kind": "identity_ambiguity",
+    "status": "pending_review",
+    "entity_id": "contact_m_salem_945",
+    "attribute": null,
+    "detected_at": "2026-06-18T00:00:00Z",
+    "detail": {
+      "reason": "shared_phone",
+      "score": 0.7,
+      "value_hash": "674705b59407bb16a796db575421ac9b8d3fa1155aa21d8bcc21935f67b739b5"
+    },
+    "refs": {
+      "entity_id_a": "contact_m_salem_945",
+      "entity_id_b": "contact_omar_945"
+    }
+  }
+]

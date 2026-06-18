@@ -1,0 +1,14 @@
+# Python / uv
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# Local databases
+*.db
+*.db-journal
+*.sqlite3
+
+# Env
+.env

@@ -1,0 +1,264 @@
+[
+  {
+    "event_id": "evt-1001",
+    "seq": 1,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "acct_helios_945",
+    "facts_created": 3,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1002",
+    "seq": 2,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "contact_mona_945",
+    "facts_created": 2,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1003",
+    "seq": 3,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "acct_helios_945",
+    "facts_created": 3,
+    "contradiction_ids": [
+      "con_8a72de967fb9d0def85172e96afce20f"
+    ],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1004",
+    "seq": 4,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "ticket_h_945_p1",
+    "facts_created": 1,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1005",
+    "seq": 5,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "ticket_h_945_p1",
+    "facts_created": 0,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1006",
+    "seq": 6,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "ticket_h_945_p1",
+    "facts_created": 1,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1007",
+    "seq": 7,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "ticket_h_945_p1",
+    "facts_created": 1,
+    "contradiction_ids": [
+      "con_9f5c12cd616f31116a2a65ee4b86e98e"
+    ],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1008",
+    "seq": 8,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "ticket_h_945_p1",
+    "facts_created": 0,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1009",
+    "seq": 9,
+    "dedup_status": "idempotency_conflict",
+    "processed": false,
+    "entity_id": null,
+    "facts_created": 0,
+    "contradiction_ids": [
+      "con_1b849f6492a99afce479daefe25fc8c6"
+    ],
+    "identity_candidate_ids": [],
+    "canonical_event_id": "evt-1008",
+    "message": "Idempotency key reused with a different payload; stored and flagged, not processed."
+  },
+  {
+    "event_id": "evt-1010",
+    "seq": 10,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "acct_nova_945",
+    "facts_created": 0,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1011",
+    "seq": 11,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "policy_nova_945_privacy",
+    "facts_created": 1,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1012",
+    "seq": 12,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "acct_delta_945",
+    "facts_created": 0,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1013",
+    "seq": 13,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "contact_mona_945",
+    "facts_created": 1,
+    "contradiction_ids": [
+      "con_6778c5671ae9afc21b35b13781ef312c"
+    ],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1014",
+    "seq": 14,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "contact_m_salem_945",
+    "facts_created": 3,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1015",
+    "seq": 15,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "contact_omar_945",
+    "facts_created": 2,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [
+      "idc_88d2de29b9c271ca11898e479fb70c1c"
+    ],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1016",
+    "seq": 16,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "ticket_n_945_security",
+    "facts_created": 1,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [
+      "idc_88d2de29b9c271ca11898e479fb70c1c"
+    ],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1017",
+    "seq": 17,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "acct_nova_945",
+    "facts_created": 2,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [
+      "idc_88d2de29b9c271ca11898e479fb70c1c"
+    ],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1018",
+    "seq": 18,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "acct_helios_945",
+    "facts_created": 1,
+    "contradiction_ids": [
+      "con_8a72de967fb9d0def85172e96afce20f"
+    ],
+    "identity_candidate_ids": [
+      "idc_88d2de29b9c271ca11898e479fb70c1c"
+    ],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1019",
+    "seq": 19,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "ticket_h_945_p1",
+    "facts_created": 1,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [
+      "idc_88d2de29b9c271ca11898e479fb70c1c"
+    ],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  },
+  {
+    "event_id": "evt-1020",
+    "seq": 20,
+    "dedup_status": "new",
+    "processed": true,
+    "entity_id": "acct_helios_945",
+    "facts_created": 1,
+    "contradiction_ids": [],
+    "identity_candidate_ids": [
+      "idc_88d2de29b9c271ca11898e479fb70c1c"
+    ],
+    "canonical_event_id": null,
+    "message": "Ingested."
+  }
+]

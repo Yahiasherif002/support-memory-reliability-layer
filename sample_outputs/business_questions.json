@@ -1,0 +1,161 @@
+{
+  "1_what_should_a_rep_know_before_calling_helios": {
+    "answer_source": "GET /v1/entities/acct_helios_945/context",
+    "top_beliefs": [
+      {
+        "attribute": "plan_tier",
+        "value": "Enterprise Support",
+        "reliability": "high",
+        "is_contradicted": true
+      },
+      {
+        "attribute": "support_tier",
+        "value": "Enterprise",
+        "reliability": "high",
+        "is_contradicted": false
+      },
+      {
+        "attribute": "sla_target",
+        "value": {
+          "priority": "P1",
+          "value": 2,
+          "unit": "hours"
+        },
+        "reliability": "high",
+        "is_contradicted": false
+      },
+      {
+        "attribute": "account_preference",
+        "value": "finance_dashboard_uptime",
+        "reliability": "medium",
+        "is_contradicted": false
+      },
+      {
+        "attribute": "region",
+        "value": "Cairo",
+        "reliability": "medium",
+        "is_contradicted": false
+      },
+      {
+        "attribute": "segment",
+        "value": "mid-market",
+        "reliability": "medium",
+        "is_contradicted": false
+      }
+    ],
+    "open_contradictions": 1,
+    "identity_warnings": []
+  },
+  "2_what_changed_over_time_and_which_source_wins": {
+    "attribute": "plan_tier",
+    "current_value": "Enterprise Support",
+    "winner": {
+      "fact_id": "fact_3526b9a6c23a691901478cc69b92973c",
+      "attribute": "plan_tier",
+      "value": "Enterprise Support",
+      "source": "contract",
+      "reliability": "high",
+      "confidence": 0.9,
+      "polarity": "assert",
+      "valid_from": "2026-04-02T13:12:00Z",
+      "valid_to": null,
+      "observed_at": "2026-04-02T13:12:00Z",
+      "recorded_at": "2026-06-18T00:00:00Z",
+      "is_winner": true,
+      "eliminated_by": null,
+      "extractor": "rule-extractor@1.0",
+      "evidence": [
+        {
+          "event_id": "evt-1003",
+          "source": "contract",
+          "reliability": "high",
+          "actor": "contract_importer",
+          "occurred_at": "2026-04-02T13:12:00Z",
+          "relation": "derived_from",
+          "locator": {
+            "field": "plan/text"
+          },
+          "payload_excerpt": null,
+          "text": "Signed addendum says Helios upgraded to Enterprise Support effective 2026-04-02. P1 response target is 2 hours. Phone escalation is included."
+        }
+      ]
+    },
+    "losers": [
+      {
+        "value": "Starter",
+        "source": "crm",
+        "reliability": "medium",
+        "eliminated_by": "reliability"
+      },
+      {
+        "value": "Starter",
+        "source": "agent_note",
+        "reliability": "low",
+        "eliminated_by": "superseded_within_value_group"
+      }
+    ],
+    "resolution_trace": [
+      {
+        "rule": "scope",
+        "detail": "3 of 3 fact(s) valid at as_of=2026-06-18T00:00:00+00:00",
+        "winner_fact_id": null,
+        "loser_fact_id": null
+      },
+      {
+        "rule": "reliability",
+        "detail": "reliability high outranks medium",
+        "winner_fact_id": "fact_3526b9a6c23a691901478cc69b92973c",
+        "loser_fact_id": "fact_a5f3e3b31809d912e911e98d4ee30c31"
+      },
+      {
+        "rule": "contradiction",
+        "detail": "2 asserted values coexist; winner is current belief, conflict recorded, facts kept",
+        "winner_fact_id": null,
+        "loser_fact_id": null
+      },
+      {
+        "rule": "confidence",
+        "detail": "belief confidence 0.9 (noisy-OR over 1 corroborating fact(s))",
+        "winner_fact_id": "fact_3526b9a6c23a691901478cc69b92973c",
+        "loser_fact_id": null
+      }
+    ]
+  },
+  "3_account_policy_that_must_not_leak": {
+    "helios_applicable_policies": [],
+    "nova_applicable_policies": [
+      "policy_nova_945_privacy"
+    ],
+    "note": "The Nova privacy policy is scoped to acct_nova_945 via related_entity_ids and never appears in Helios context."
+  },
+  "4_duplicate_retries_or_idempotency_conflicts": {
+    "idempotency_conflicts": [
+      {
+        "id": "con_1b849f6492a99afce479daefe25fc8c6",
+        "refs": {
+          "fact_id_a": null,
+          "fact_id_b": null,
+          "event_id_a": "evt-1008",
+          "event_id_b": "evt-1009",
+          "resolution_note": null
+        },
+        "detail": {
+          "idempotency_key": "idem-1008",
+          "first_fingerprint": "f1c380036352735d4a057fdbdaaba73cc82830a0eb5b897be71b1d86e7525af0",
+          "conflicting_fingerprint": "237dc85913215e9a8b8b8a310935c2989ef5bfa7edc2e229b5ee0970d7b5f7b5"
+        }
+      }
+    ],
+    "note": "evt-1009 reused idem-1008 with a different body -> flagged conflict. evt-1008 self-describes as a retry of evt-1004 but carries a different idempotency_key, so it was processed as new (surfaced, not silently merged)."
+  },
+  "5_contacts_not_to_merge_without_review": [
+    {
+      "candidate_id": "idc_88d2de29b9c271ca11898e479fb70c1c",
+      "entities": {
+        "entity_id_a": "contact_m_salem_945",
+        "entity_id_b": "contact_omar_945"
+      },
+      "reason": "shared_phone"
+    }
+  ]
+}

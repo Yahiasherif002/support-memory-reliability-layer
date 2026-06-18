@@ -1,0 +1,97 @@
+{
+  "entity": {
+    "id": "acct_nova_945",
+    "entity_type": "account",
+    "display_name": "Nova Clinic",
+    "created_at": "2026-06-18T00:00:00Z",
+    "related_entity_ids": [
+      "contact_omar_945",
+      "policy_nova_945_privacy",
+      "ticket_n_945_security"
+    ]
+  },
+  "generated_at": "2026-06-18T00:00:00Z",
+  "as_of": "2026-06-18T00:00:00Z",
+  "budget": 12,
+  "beliefs": [
+    {
+      "attribute": "plan_tier",
+      "value": "Business",
+      "confidence": 0.9,
+      "reliability": "high",
+      "is_stale": false,
+      "is_contradicted": false,
+      "salience": 0.6483,
+      "provenance": {
+        "fact_id": "fact_9c4cfe429906ad6e37eab8fd42d309a9",
+        "event_ids": [
+          "evt-1017"
+        ],
+        "reliability": "high",
+        "explain": "/v1/entities/acct_nova_945/explain?attribute=plan_tier"
+      }
+    },
+    {
+      "attribute": "sla_target",
+      "value": {
+        "priority": "standard",
+        "target": "next_business_day"
+      },
+      "confidence": 0.9,
+      "reliability": "high",
+      "is_stale": false,
+      "is_contradicted": false,
+      "salience": 0.5801,
+      "provenance": {
+        "fact_id": "fact_034e094410a4c0a0b668d1ba801f49f2",
+        "event_ids": [
+          "evt-1017"
+        ],
+        "reliability": "high",
+        "explain": "/v1/entities/acct_nova_945/explain?attribute=sla_target"
+      }
+    }
+  ],
+  "applicable_policies": [
+    {
+      "policy_entity_id": "policy_nova_945_privacy",
+      "name": "policy",
+      "rule": "Data Processing Addendum for Nova Clinic: no customer data may be used for training, demos, or analytics outside the Nova account.",
+      "reliability": "high",
+      "provenance": {
+        "fact_id": "fact_03323b468dac4a60d974e74223510bd1",
+        "event_ids": [
+          "evt-1011"
+        ],
+        "reliability": null,
+        "explain": "/v1/entities/policy_nova_945_privacy/explain?attribute=policy_rule"
+      }
+    }
+  ],
+  "open_contradictions": [],
+  "identity_warnings": [],
+  "recent_activity": [
+    {
+      "fact_id": "fact_9c4cfe429906ad6e37eab8fd42d309a9",
+      "attribute": "plan_tier",
+      "value": "Business",
+      "source": "contract",
+      "reliability": "high",
+      "observed_at": "2026-04-08T10:30:00Z",
+      "event_id": "evt-1017"
+    },
+    {
+      "fact_id": "fact_034e094410a4c0a0b668d1ba801f49f2",
+      "attribute": "sla_target",
+      "value": {
+        "priority": "standard",
+        "target": "next_business_day"
+      },
+      "source": "contract",
+      "reliability": "high",
+      "observed_at": "2026-04-08T10:30:00Z",
+      "event_id": "evt-1017"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,87 @@
+{
+  "entity_id": "acct_helios_945",
+  "as_of": "2026-06-18T00:00:00+00:00",
+  "has_previous_build": false,
+  "previous_built_at": null,
+  "unchanged": false,
+  "belief_hash": "d052f8d0be1f1f0b3cbb0f06a44787f695f6c8706e5d9a67290aa82191d89e81",
+  "through_seq": 20,
+  "changes": {
+    "added": {
+      "account_preference": {
+        "value": "finance_dashboard_uptime",
+        "winning_fact_id": "fact_a1f83ae770b770c2cd6c098dc8b689fe",
+        "confidence": 0.6,
+        "is_contradicted": false,
+        "is_stale": false
+      },
+      "plan_tier": {
+        "value": "Enterprise Support",
+        "winning_fact_id": "fact_3526b9a6c23a691901478cc69b92973c",
+        "confidence": 0.9,
+        "is_contradicted": true,
+        "is_stale": false
+      },
+      "region": {
+        "value": "Cairo",
+        "winning_fact_id": "fact_a48f4d221844feb1a9e11e298dabb70f",
+        "confidence": 0.6,
+        "is_contradicted": false,
+        "is_stale": false
+      },
+      "segment": {
+        "value": "mid-market",
+        "winning_fact_id": "fact_27834be62b160ade48f9770af5783db4",
+        "confidence": 0.6,
+        "is_contradicted": false,
+        "is_stale": false
+      },
+      "sla_target": {
+        "value": {
+          "priority": "P1",
+          "value": 2,
+          "unit": "hours"
+        },
+        "winning_fact_id": "fact_092950f54839bfc261106b54e54868cd",
+        "confidence": 0.9,
+        "is_contradicted": false,
+        "is_stale": false
+      },
+      "support_tier": {
+        "value": "Enterprise",
+        "winning_fact_id": "fact_85e2daa4bc62e6f71ee06a64a94e6b8a",
+        "confidence": 0.9,
+        "is_contradicted": false,
+        "is_stale": false
+      }
+    },
+    "removed": {},
+    "changed": {}
+  },
+  "new_events_since_last": [
+    {
+      "event_id": "evt-1001",
+      "source": "crm",
+      "occurred_at": "2026-04-01T09:00:00+00:00",
+      "text": "Account created: Helios Apps. Segment: mid-market. Region: Cairo. Current plan recorded as Starter."
+    },
+    {
+      "event_id": "evt-1003",
+      "source": "contract",
+      "occurred_at": "2026-04-02T13:12:00+00:00",
+      "text": "Signed addendum says Helios upgraded to Enterprise Support effective 2026-04-02. P1 response target is 2 hours. Phone escalation is included."
+    },
+    {
+      "event_id": "evt-1018",
+      "source": "agent_note",
+      "occurred_at": "2026-04-09T16:20:00+00:00",
+      "text": "Old note from March says Helios was on Starter and had email-only support. This may now be stale because of the April addendum."
+    },
+    {
+      "event_id": "evt-1020",
+      "source": "email",
+      "occurred_at": "2026-04-10T11:10:00+00:00",
+      "text": "Mona asks for a postmortem by Monday and wants the assistant to remember that Helios cares most about finance dashboard uptime."
+    }
+  ]
+}

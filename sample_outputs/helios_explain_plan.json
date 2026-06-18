@@ -1,0 +1,133 @@
+{
+  "entity_id": "acct_helios_945",
+  "attribute": "plan_tier",
+  "as_of": "2026-06-18T00:00:00Z",
+  "current_value": "Enterprise Support",
+  "confidence": 0.9,
+  "confidence_basis": "noisy-OR over 1 corroborating fact(s)",
+  "is_stale": false,
+  "is_contradicted": true,
+  "policy": "reliability-precedence-v1",
+  "winning_fact_id": "fact_3526b9a6c23a691901478cc69b92973c",
+  "resolution_trace": [
+    {
+      "rule": "scope",
+      "detail": "3 of 3 fact(s) valid at as_of=2026-06-18T00:00:00+00:00",
+      "winner_fact_id": null,
+      "loser_fact_id": null
+    },
+    {
+      "rule": "reliability",
+      "detail": "reliability high outranks medium",
+      "winner_fact_id": "fact_3526b9a6c23a691901478cc69b92973c",
+      "loser_fact_id": "fact_a5f3e3b31809d912e911e98d4ee30c31"
+    },
+    {
+      "rule": "contradiction",
+      "detail": "2 asserted values coexist; winner is current belief, conflict recorded, facts kept",
+      "winner_fact_id": null,
+      "loser_fact_id": null
+    },
+    {
+      "rule": "confidence",
+      "detail": "belief confidence 0.9 (noisy-OR over 1 corroborating fact(s))",
+      "winner_fact_id": "fact_3526b9a6c23a691901478cc69b92973c",
+      "loser_fact_id": null
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "fact_a5f3e3b31809d912e911e98d4ee30c31",
+      "attribute": "plan_tier",
+      "value": "Starter",
+      "source": "crm",
+      "reliability": "medium",
+      "confidence": 0.6,
+      "polarity": "assert",
+      "valid_from": "2026-04-01T09:00:00Z",
+      "valid_to": null,
+      "observed_at": "2026-04-01T09:00:00Z",
+      "recorded_at": "2026-06-18T00:00:00Z",
+      "is_winner": false,
+      "eliminated_by": "reliability",
+      "extractor": "rule-extractor@1.0",
+      "evidence": [
+        {
+          "event_id": "evt-1001",
+          "source": "crm",
+          "reliability": "medium",
+          "actor": "system",
+          "occurred_at": "2026-04-01T09:00:00Z",
+          "relation": "derived_from",
+          "locator": {
+            "field": "plan/text"
+          },
+          "payload_excerpt": null,
+          "text": "Account created: Helios Apps. Segment: mid-market. Region: Cairo. Current plan recorded as Starter."
+        }
+      ]
+    },
+    {
+      "fact_id": "fact_3526b9a6c23a691901478cc69b92973c",
+      "attribute": "plan_tier",
+      "value": "Enterprise Support",
+      "source": "contract",
+      "reliability": "high",
+      "confidence": 0.9,
+      "polarity": "assert",
+      "valid_from": "2026-04-02T13:12:00Z",
+      "valid_to": null,
+      "observed_at": "2026-04-02T13:12:00Z",
+      "recorded_at": "2026-06-18T00:00:00Z",
+      "is_winner": true,
+      "eliminated_by": null,
+      "extractor": "rule-extractor@1.0",
+      "evidence": [
+        {
+          "event_id": "evt-1003",
+          "source": "contract",
+          "reliability": "high",
+          "actor": "contract_importer",
+          "occurred_at": "2026-04-02T13:12:00Z",
+          "relation": "derived_from",
+          "locator": {
+            "field": "plan/text"
+          },
+          "payload_excerpt": null,
+          "text": "Signed addendum says Helios upgraded to Enterprise Support effective 2026-04-02. P1 response target is 2 hours. Phone escalation is included."
+        }
+      ]
+    },
+    {
+      "fact_id": "fact_0ebc0d4eb8c1756cc82c0cbc2a59af7a",
+      "attribute": "plan_tier",
+      "value": "Starter",
+      "source": "agent_note",
+      "reliability": "low",
+      "confidence": 0.3,
+      "polarity": "assert",
+      "valid_from": "2026-04-09T16:20:00Z",
+      "valid_to": null,
+      "observed_at": "2026-04-09T16:20:00Z",
+      "recorded_at": "2026-06-18T00:00:00Z",
+      "is_winner": false,
+      "eliminated_by": "superseded_within_value_group",
+      "extractor": "rule-extractor@1.0",
+      "evidence": [
+        {
+          "event_id": "evt-1018",
+          "source": "agent_note",
+          "reliability": "low",
+          "actor": "Yara",
+          "occurred_at": "2026-04-09T16:20:00Z",
+          "relation": "derived_from",
+          "locator": {
+            "field": "plan/text"
+          },
+          "payload_excerpt": null,
+          "text": "Old note from March says Helios was on Starter and had email-only support. This may now be stale because of the April addendum."
+        }
+      ]
+    }
+  ]
+}

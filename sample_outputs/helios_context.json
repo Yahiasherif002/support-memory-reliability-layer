@@ -1,0 +1,233 @@
+{
+  "entity": {
+    "id": "acct_helios_945",
+    "entity_type": "account",
+    "display_name": "Helios Apps",
+    "created_at": "2026-06-18T00:00:00Z",
+    "related_entity_ids": [
+      "contact_m_salem_945",
+      "contact_mona_945",
+      "ticket_h_945_p1"
+    ]
+  },
+  "generated_at": "2026-06-18T00:00:00Z",
+  "as_of": "2026-06-18T00:00:00Z",
+  "budget": 12,
+  "beliefs": [
+    {
+      "attribute": "plan_tier",
+      "value": "Enterprise Support",
+      "confidence": 0.9,
+      "reliability": "high",
+      "is_stale": false,
+      "is_contradicted": true,
+      "salience": 0.6335,
+      "provenance": {
+        "fact_id": "fact_3526b9a6c23a691901478cc69b92973c",
+        "event_ids": [
+          "evt-1003"
+        ],
+        "reliability": "high",
+        "explain": "/v1/entities/acct_helios_945/explain?attribute=plan_tier"
+      }
+    },
+    {
+      "attribute": "support_tier",
+      "value": "Enterprise",
+      "confidence": 0.9,
+      "reliability": "high",
+      "is_stale": false,
+      "is_contradicted": false,
+      "salience": 0.6001,
+      "provenance": {
+        "fact_id": "fact_85e2daa4bc62e6f71ee06a64a94e6b8a",
+        "event_ids": [
+          "evt-1003"
+        ],
+        "reliability": "high",
+        "explain": "/v1/entities/acct_helios_945/explain?attribute=support_tier"
+      }
+    },
+    {
+      "attribute": "sla_target",
+      "value": {
+        "priority": "P1",
+        "value": 2,
+        "unit": "hours"
+      },
+      "confidence": 0.9,
+      "reliability": "high",
+      "is_stale": false,
+      "is_contradicted": false,
+      "salience": 0.5668,
+      "provenance": {
+        "fact_id": "fact_092950f54839bfc261106b54e54868cd",
+        "event_ids": [
+          "evt-1003"
+        ],
+        "reliability": "high",
+        "explain": "/v1/entities/acct_helios_945/explain?attribute=sla_target"
+      }
+    },
+    {
+      "attribute": "account_preference",
+      "value": "finance_dashboard_uptime",
+      "confidence": 0.6,
+      "reliability": "medium",
+      "is_stale": false,
+      "is_contradicted": false,
+      "salience": 0.2897,
+      "provenance": {
+        "fact_id": "fact_a1f83ae770b770c2cd6c098dc8b689fe",
+        "event_ids": [
+          "evt-1020"
+        ],
+        "reliability": "medium",
+        "explain": "/v1/entities/acct_helios_945/explain?attribute=account_preference"
+      }
+    },
+    {
+      "attribute": "region",
+      "value": "Cairo",
+      "confidence": 0.6,
+      "reliability": "medium",
+      "is_stale": false,
+      "is_contradicted": false,
+      "salience": 0.2795,
+      "provenance": {
+        "fact_id": "fact_a48f4d221844feb1a9e11e298dabb70f",
+        "event_ids": [
+          "evt-1001"
+        ],
+        "reliability": "medium",
+        "explain": "/v1/entities/acct_helios_945/explain?attribute=region"
+      }
+    },
+    {
+      "attribute": "segment",
+      "value": "mid-market",
+      "confidence": 0.6,
+      "reliability": "medium",
+      "is_stale": false,
+      "is_contradicted": false,
+      "salience": 0.2795,
+      "provenance": {
+        "fact_id": "fact_27834be62b160ade48f9770af5783db4",
+        "event_ids": [
+          "evt-1001"
+        ],
+        "reliability": "medium",
+        "explain": "/v1/entities/acct_helios_945/explain?attribute=segment"
+      }
+    }
+  ],
+  "applicable_policies": [],
+  "open_contradictions": [
+    {
+      "id": "con_8a72de967fb9d0def85172e96afce20f",
+      "type": "contradiction",
+      "kind": "belief_value_conflict",
+      "status": "open",
+      "entity_id": "acct_helios_945",
+      "attribute": "plan_tier",
+      "detected_at": "2026-06-18T00:00:00Z",
+      "detail": {
+        "winner_value": "Enterprise Support",
+        "other_value": "Starter",
+        "winner_reliability": "high",
+        "other_reliability": "medium",
+        "winner_source": "contract",
+        "other_source": "crm"
+      },
+      "refs": {
+        "fact_id_a": "fact_3526b9a6c23a691901478cc69b92973c",
+        "fact_id_b": "fact_a5f3e3b31809d912e911e98d4ee30c31",
+        "event_id_a": null,
+        "event_id_b": null,
+        "resolution_note": null
+      }
+    }
+  ],
+  "identity_warnings": [],
+  "recent_activity": [
+    {
+      "fact_id": "fact_a1f83ae770b770c2cd6c098dc8b689fe",
+      "attribute": "account_preference",
+      "value": "finance_dashboard_uptime",
+      "source": "email",
+      "reliability": "medium",
+      "observed_at": "2026-04-10T11:10:00Z",
+      "event_id": "evt-1020"
+    },
+    {
+      "fact_id": "fact_0ebc0d4eb8c1756cc82c0cbc2a59af7a",
+      "attribute": "plan_tier",
+      "value": "Starter",
+      "source": "agent_note",
+      "reliability": "low",
+      "observed_at": "2026-04-09T16:20:00Z",
+      "event_id": "evt-1018"
+    },
+    {
+      "fact_id": "fact_3526b9a6c23a691901478cc69b92973c",
+      "attribute": "plan_tier",
+      "value": "Enterprise Support",
+      "source": "contract",
+      "reliability": "high",
+      "observed_at": "2026-04-02T13:12:00Z",
+      "event_id": "evt-1003"
+    },
+    {
+      "fact_id": "fact_092950f54839bfc261106b54e54868cd",
+      "attribute": "sla_target",
+      "value": {
+        "priority": "P1",
+        "value": 2,
+        "unit": "hours"
+      },
+      "source": "contract",
+      "reliability": "high",
+      "observed_at": "2026-04-02T13:12:00Z",
+      "event_id": "evt-1003"
+    },
+    {
+      "fact_id": "fact_85e2daa4bc62e6f71ee06a64a94e6b8a",
+      "attribute": "support_tier",
+      "value": "Enterprise",
+      "source": "contract",
+      "reliability": "high",
+      "observed_at": "2026-04-02T13:12:00Z",
+      "event_id": "evt-1003"
+    },
+    {
+      "fact_id": "fact_a5f3e3b31809d912e911e98d4ee30c31",
+      "attribute": "plan_tier",
+      "value": "Starter",
+      "source": "crm",
+      "reliability": "medium",
+      "observed_at": "2026-04-01T09:00:00Z",
+      "event_id": "evt-1001"
+    },
+    {
+      "fact_id": "fact_a48f4d221844feb1a9e11e298dabb70f",
+      "attribute": "region",
+      "value": "Cairo",
+      "source": "crm",
+      "reliability": "medium",
+      "observed_at": "2026-04-01T09:00:00Z",
+      "event_id": "evt-1001"
+    },
+    {
+      "fact_id": "fact_27834be62b160ade48f9770af5783db4",
+      "attribute": "segment",
+      "value": "mid-market",
+      "source": "crm",
+      "reliability": "medium",
+      "observed_at": "2026-04-01T09:00:00Z",
+      "event_id": "evt-1001"
+    }
+  ],
+  "notes": [
+    "Some beliefs are contradicted \u2014 see open_contradictions."
+  ]
+}
